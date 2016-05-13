@@ -210,7 +210,7 @@
 -(void)dismissKeyboardaa
 {
     [statusView setHidden:YES];
-    [textView resignFirstResponder];
+    [_chattext resignFirstResponder];
 }
 -(void)sendMessage
 {
