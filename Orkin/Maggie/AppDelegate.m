@@ -56,7 +56,6 @@ static NSString *_deviceToken = NULL;
 {
     //register to receive notifications
     [application registerForRemoteNotifications];
-    NSLog(@"didRegisterUser");
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -79,16 +78,9 @@ static NSString *_deviceToken = NULL;
                [[NavigationHandler getInstance] MoveToMessages:messageid];
     }
     else{
-       
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New Message" message:@"New message from Admin" delegate:self cancelButtonTitle:@"Show" otherButtonTitles:@"Cancel", nil];
+       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"New Message" message:@"New message from Admin" delegate:self cancelButtonTitle:@"Show" otherButtonTitles:@"Cancel", nil];
         alert.tag = 1;
         [alert show];
-        // App is in UIApplicationStateActive (running in foreground)
-        // perhaps show an UIAlertView
-//        _notiThread = [[ChatThreads alloc] init];
-//        _notiThread.message_text =   [userInfo objectForKey:@"message_text"];
-//        _notiThread.sent_by      =   [userInfo objectForKey:@"sent_by"];
-//        _notiThread.date_time    =   [userInfo objectForKey:@"date_time"];
     }
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

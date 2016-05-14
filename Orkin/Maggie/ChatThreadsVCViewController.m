@@ -33,11 +33,11 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//    if (_tableView.contentSize.height > _tableView.frame.size.height)
-//    {
-//        CGPoint offset = CGPointMake(0, _tableView.contentSize.height -  _tableView.frame.size.height);
-//        [_tableView setContentOffset:offset animated:NO];
-//    }
+    //    if (_tableView.contentSize.height > _tableView.frame.size.height)
+    //    {
+    //        CGPoint offset = CGPointMake(0, _tableView.contentSize.height -  _tableView.frame.size.height);
+    //        [_tableView setContentOffset:offset animated:NO];
+    //    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,7 +66,7 @@
     // textView.animateHeightChange = NO; //turns off animation
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboardaa)];
     [self.view addGestureRecognizer:tap];
-   // [self.view addSubview:containerView];
+    // [self.view addSubview:containerView];
     
     UIImage *rawEntryBackground = [UIImage imageNamed:@"MessageEntryInputField.png"];
     UIImage *entryBackground = [rawEntryBackground stretchableImageWithLeftCapWidth:13 topCapHeight:22];
@@ -158,7 +158,7 @@
             [alert show];
         }
     }];
-
+    
 }
 -(void)getChatByMessageId{
     [CustomLoading showAlertMessage];
@@ -207,14 +207,22 @@
     }];
     
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+    firstImg.image = [UIImage imageNamed:@"textboxselected.png"];
+}
+
 -(void)dismissKeyboardaa
 {
+     firstImg.image = [UIImage imageNamed:@"qtextboxbg.png"];
     [statusView setHidden:YES];
     [_chattext resignFirstResponder];
 }
 -(void)sendMessage
 {
-     [_chattext resignFirstResponder];
+    [_chattext resignFirstResponder];
+    firstImg.image = [UIImage imageNamed:@"qtextboxbg.png"];
     [CustomLoading showAlertMessage];
     NSString *textToSend = _chattext.text;
     _chattext.text = @"";
@@ -262,7 +270,7 @@
             [alert show];
         }
     }];
-   
+    
 }
 #pragma mark - Server Communication Helpher Method
 

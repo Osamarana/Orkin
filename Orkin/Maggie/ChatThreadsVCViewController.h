@@ -21,6 +21,7 @@
     IBOutlet UIView *statusView;
     NSString *statusString;
     IBOutlet UIView *chatview;
+    __weak IBOutlet UIImageView *firstImg;
 }
 
 @property (strong, nonatomic) NSMutableArray *messages;

@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="chattext" destination="7bV-ne-COo" id="jbQ-zc-Mbc"/>
                 <outlet property="chatview" destination="I6T-Ku-zts" id="igm-ID-PNA"/>
+                <outlet property="firstImg" destination="2ZP-DE-ySn" id="QsS-wU-iyh"/>
                 <outlet property="optionsBtn" destination="fod-Rq-nbK" id="neA-2L-vYo"/>
                 <outlet property="statusView" destination="AAH-8J-WsR" id="IVp-g5-KaJ"/>
                 <outlet property="statuslbl" destination="LJu-CT-2ee" id="y6F-x1-9ja"/>
@@ -75,16 +76,20 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" id="I6T-Ku-zts">
-                    <rect key="frame" x="0.0" y="530" width="320" height="40"/>
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottombg.png" id="RmA-sm-mbv">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message..." textAlignment="natural" minimumFontSize="17" id="7bV-ne-COo">
-                            <rect key="frame" x="10" y="5" width="230" height="30"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qtextboxbg.png" id="2ZP-DE-ySn">
+                            <rect key="frame" x="10" y="5" width="255" height="38"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Message..." textAlignment="natural" minimumFontSize="17" id="7bV-ne-COo">
+                            <rect key="frame" x="26" y="10" width="210" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             <connections>
@@ -174,6 +179,7 @@
         <image name="back.png" width="10" height="18"/>
         <image name="bottombg.png" width="540" height="76"/>
         <image name="messageheader.png" width="540" height="335"/>
+        <image name="qtextboxbg.png" width="434" height="78"/>
         <image name="scren_dimmer.png" width="524" height="932"/>
     </resources>
 </document>
